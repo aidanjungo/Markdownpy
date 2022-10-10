@@ -168,4 +168,4 @@ class Reference:
     def write(self):
         """Write down a reference"""
 
-        return f'<a id="{self.id}">[{self.idx}]</a> ' + self.text
+        return f'<a id="{self.id}">[{self.idx}]</a> ' + self.description
