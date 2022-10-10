@@ -1,8 +1,8 @@
 # Markdownpy
 
-<img align="right" width="300" height="300" src="logo/markdownpy_logo.png">
-
 Simple Python package to write Markdown document directly from a Python script.
+
+<div align=center><img src="logo/markdownpy_logo.png" alt="" height=300/></div>
 
 ## Install
 
@@ -16,15 +16,13 @@ cd Markdownpy
 pip install -e .
 ```
 
-### From Pypi
+### From PyPi
 
 The package is not publish yet on Pypi.
 
-### Usage
+## Usage
 
 You can import and use the package in any Python script and use it to generate result or documentation filse on the fly.
-
-The following Python script:
 
 ```python
 from markdownpy.markdownpy import MarkdownDoc
@@ -47,3 +45,4 @@ md.save()
 ```
 
 From more example, checkout [example.py](examples/example.py)
+
