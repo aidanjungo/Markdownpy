@@ -4,7 +4,7 @@
 import setuptools
 
 NAME = "markdownpy"
-VERSION = "0.1.1"
+VERSION = "0.1.2"
 AUTHOR = "Aidan Jungo"
 EMAIL = "aidan.jungo@cfse.ch"
 DESCRIPTION = "PyPI package to write Markdown document directly from a Python script"
