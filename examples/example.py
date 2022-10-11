@@ -1,4 +1,4 @@
-from markdownpy.markdownpy import MarkdownDoc, Link, Reference
+from markdownpy.markdownpy import MarkdownDoc, Link, Reference, Table
 from pathlib import Path
 
 mypath = Path("MyExample.md")
@@ -95,5 +95,16 @@ md.p(f"This is my refs {myref.cite()}, {myref2.cite()},  {myref3.cite()} cite in
 md.p(myref.write())
 md.p(myref2.write())
 md.p(myref3.write())
+
+
+md.h3("Tables")
+
+mytable = Table([["a","b","c"],[1,2,3]])
+md.p(mytable.write())
+
+mycsvtable = Table()
+mycsvtable.from_csv("./simple_table.csv")
+md.p(mycsvtable.write())
+
 
 md.save()

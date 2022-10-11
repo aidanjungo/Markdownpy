@@ -15,6 +15,7 @@ limitations under the License.
 Author: Aidan Jungo
 """
 
+import csv
 
 class MarkdownDoc:
     def __init__(self, path):
@@ -172,3 +173,31 @@ class Reference:
         """Write down a reference"""
 
         return f'<a id="{self.id}">[{self.idx}]</a> ' + self.description
+
+class Table:
+    """Class to add Table from different sources."""
+    
+    def __init__(self, mytable=[]):
+        self.table = mytable
+
+    def from_csv(self, path):
+        """Get table form a CSV file."""
+        
+        self.table = []
+        
+        with open(path, newline='') as csvfile:
+            spamreader = csv.reader(csvfile, delimiter=',')
+            for row in spamreader:
+                self.table.append(row)
+    
+    def write(self):
+        """Write the table in the Markdown document."""
+        
+        lines = ""
+        for r,row in enumerate(self.table):
+            row_str = [str(i) for i in row]
+            lines += "|" + "|".join(row_str) + "|\n"
+            if r==0:
+                lines += "|" + "|".join(["-"]*len(row_str)) + "|\n"
+            
+        return lines
