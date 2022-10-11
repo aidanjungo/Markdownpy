@@ -19,7 +19,8 @@ pip install -e ."""
 md.code(install_commands, "bash")
 
 md.h3("From PyPi")
-md.p("The package is not publish yet on Pypi.")
+md.p("You can install the last version of `Markdownpy` with pip:")
+md.code("pip install markdownpy", "python")
 
 md.h2("Usage")
 md.p("You can import and use the package in any Python script and use it to generate result or documentation filse on the fly.")
@@ -30,5 +31,8 @@ md.code(small_example,"python")
 
 example_link = Link("example.py","examples/example.py")
 md.p(f"From more example, checkout {example_link}")
+
+readme_script_link = Link("readme.py","examples/readme.py")
+md.p(f"By the way, this README has been generate using `Markdownpy`, you can see the python script here: {readme_script_link}")
 
 md.save()

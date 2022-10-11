@@ -18,7 +18,11 @@ pip install -e .
 
 ### From PyPi
 
-The package is not publish yet on Pypi.
+You can install the last version of `Markdownpy` with pip:
+
+```python
+pip install markdownpy
+```
 
 ## Usage
 
@@ -45,4 +49,6 @@ md.save()
 ```
 
 From more example, checkout [example.py](examples/example.py)
+
+By the way, this README has been generate using `Markdownpy`, you can see the python script here: [readme.py](examples/readme.py)
 
