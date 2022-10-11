@@ -62,11 +62,14 @@ class MarkdownDoc:
         self.file.write("###### " + text)
         self.file.write("\n\n")
 
-    def p(self, text):
+    def p(self, text, no_new_line=False):
         """Add paragraph to the Markdown document"""
 
         self.file.write(text)
-        self.file.write("\n\n")
+        if no_new_line:
+            self.file.write("\n")
+        else:
+            self.file.write("\n\n")
 
     def blist(self, mylist: list):
         """Add bullet list to the Markdown document"""
