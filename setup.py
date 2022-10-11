@@ -4,12 +4,13 @@
 import setuptools
 
 NAME = "markdownpy"
-VERSION = "0.1.2"
+VERSION = "0.1.3"
 AUTHOR = "Aidan Jungo"
 EMAIL = "aidan.jungo@cfse.ch"
 DESCRIPTION = "PyPI package to write Markdown document directly from a Python script"
-LONG_DESCRIPTION = "PyPI package to write Markdown document directly from a Python script"
-URL = ""
+LONG_DESCRIPTION = open("README.md").read()
+long_description_content_type="text/markdown",
+URL = "https://github.com/aidanjungo/Markdownpy"
 REQUIRES_PYTHON = ">=3.8.0"
 REQUIRED = []
 README = "README.md"
