@@ -3,15 +3,24 @@ from pathlib import Path
 
 md = MarkdownDoc("../README.md")
 
-md.p("[![PyPi version](https://img.shields.io/pypi/v/markdownpy.svg)](https://pypi.python.org/pypi/markdownpy)", no_new_line=True)
-md.p("[![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://github.com/aidanjungo/Markdownpy/blob/main/LICENSE.txt)", no_new_line=True)
-md.p("[![Black code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)", no_new_line=True)
+md.p(
+    "[![PyPi version](https://img.shields.io/pypi/v/markdownpy.svg)](https://pypi.python.org/pypi/markdownpy)",
+    no_new_line=True,
+)
+md.p(
+    "[![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://github.com/aidanjungo/Markdownpy/blob/main/LICENSE.txt)",
+    no_new_line=True,
+)
+md.p(
+    "[![Black code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)",
+    no_new_line=True,
+)
 
 md.h1("Markdownpy")
 
 md.p("Simple Python package to write Markdown document directly from a Python script.")
 
-md.image_custom("logo/markdownpy_logo.png",height=300, align="center")
+md.image_custom("logo/markdownpy_logo.png", height=300, align="center")
 
 md.h2("Install")
 
@@ -27,16 +36,20 @@ md.p("You can install the last version of `Markdownpy` with pip:")
 md.code("pip install markdownpy", "python")
 
 md.h2("Usage")
-md.p("You can import and use the package in any Python script and use it to generate result or documentation filse on the fly.")
+md.p(
+    "You can import and use the package in any Python script and use it to generate result or documentation filse on the fly."
+)
 
 small_example = Path("readme_small_example.py").read_text()
-md.code(small_example,"python")
+md.code(small_example, "python")
 
 
-example_link = Link("example.py","examples/example.py")
+example_link = Link("example.py", "examples/example.py")
 md.p(f"From more example, checkout {example_link}")
 
-readme_script_link = Link("readme.py","examples/readme.py")
-md.p(f"By the way, this README has been generate using `Markdownpy`, you can see the python script here: {readme_script_link}")
+readme_script_link = Link("readme.py", "examples/readme.py")
+md.p(
+    f"By the way, this README has been generate using `Markdownpy`, you can see the python script here: {readme_script_link}"
+)
 
 md.save()

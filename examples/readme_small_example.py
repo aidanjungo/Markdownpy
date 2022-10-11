@@ -8,9 +8,9 @@ md.p("paragraph")
 
 md.h2("Lists")
 
-mylist=[]
+mylist = []
 for i in range(5):
-   mylist.append(f"item_{i}") 
+    mylist.append(f"item_{i}")
 
 md.blist(mylist)
 

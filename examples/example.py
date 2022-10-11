@@ -26,11 +26,11 @@ md.nlist(["item1", "item2", "item3"])
 
 md.h3("Text and code block")
 
-mycode="""import numpy as np
+mycode = """import numpy as np
 np.empty(20)"""
 md.code(mycode, "python")
 
-mytext="""Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+mytext = """Lorem ipsum dolor sit amet consectetur adipisicing elit. 
 Nobis, voluptatum molestias! A debitis natus tenetur incidunt 
 fuga accusamus voluptatem nesciunt quis inventore adipisci, 
 suscipit perspiciatis ducimus quae placeat rem nisi?"""
@@ -50,7 +50,7 @@ md.p("<sup>sup</sup>")
 
 md.h3("Links")
 
-gh_link = Link("Github","https://github.com")
+gh_link = Link("Github", "https://github.com")
 md.p(f"This is the link to {gh_link}")
 
 formating_link = Link("Formatting section", "#formating")
@@ -62,7 +62,9 @@ md.h3("Images")
 md.image("../logo/markdownpy_logo.png", alt_text="Logo")
 
 md.p("With `image_custom` you can define height, width, alignement")
-md.image_custom("../logo/markdownpy_logo.png", alt_text="Logo", height=125, width=422, align="center")
+md.image_custom(
+    "../logo/markdownpy_logo.png", alt_text="Logo", height=125, width=422, align="center"
+)
 
 
 md.h3("Separation line")
@@ -75,9 +77,18 @@ md.line(3)
 
 md.h3("Reference")
 
-myref = Reference("#JoR22", "Doe J., Title of a good reference, Journal of References, Volume 42, Number 3,  <https://google.com>")
-myref2 = Reference("#JoR23", "Doe J., Title of a good reference, Journal of References, Volume 43, Number 3,  <https://google.com>")
-myref3 = Reference("#JoR24", "Doe J., Title of a good reference, Journal of References, Volume 44, Number 6,  <https://google.com>")
+myref = Reference(
+    "#JoR22",
+    "Doe J., Title of a good reference, Journal of References, Volume 42, Number 3,  <https://google.com>",
+)
+myref2 = Reference(
+    "#JoR23",
+    "Doe J., Title of a good reference, Journal of References, Volume 43, Number 3,  <https://google.com>",
+)
+myref3 = Reference(
+    "#JoR24",
+    "Doe J., Title of a good reference, Journal of References, Volume 44, Number 6,  <https://google.com>",
+)
 
 md.p(f"This is my refs {myref.cite()}, {myref2.cite()},  {myref3.cite()} cite in a paragraph!")
 
