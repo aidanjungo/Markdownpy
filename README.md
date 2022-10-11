@@ -1,3 +1,6 @@
+[![PyPi version](https://img.shields.io/pypi/v/markdownpy.svg)](https://pypi.python.org/pypi/markdownpy)
+[![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://github.com/aidanjungo/Markdownpy/blob/main/LICENSE.txt)
+[![Black code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 # Markdownpy
 
 Simple Python package to write Markdown document directly from a Python script.

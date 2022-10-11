@@ -3,6 +3,10 @@ from pathlib import Path
 
 md = MarkdownDoc("../README.md")
 
+md.p("[![PyPi version](https://img.shields.io/pypi/v/markdownpy.svg)](https://pypi.python.org/pypi/markdownpy)", no_new_line=True)
+md.p("[![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://github.com/aidanjungo/Markdownpy/blob/main/LICENSE.txt)", no_new_line=True)
+md.p("[![Black code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)", no_new_line=True)
+
 md.h1("Markdownpy")
 
 md.p("Simple Python package to write Markdown document directly from a Python script.")
