@@ -29,7 +29,7 @@ pip install markdownpy
 
 ## Usage
 
-You can import and use the package in any Python script and use it to generate result or documentation filse on the fly.
+You can import and use the package in any Python script and use it to generate result or documentation files on the fly.
 
 ```python
 from markdownpy.markdownpy import MarkdownDoc
@@ -54,5 +54,5 @@ md.save()
 
 From more example, checkout [example.py](examples/example.py)
 
-By the way, this README has been generate using `Markdownpy`, you can see the python script here: [readme.py](examples/readme.py)
+By the way, this README has been generated using `Markdownpy`, you can see the python script here: [readme.py](examples/readme.py)
 
