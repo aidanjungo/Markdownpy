@@ -8,7 +8,7 @@ md.p(
     no_new_line=True,
 )
 md.p(
-    "[![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://github.com/aidanjungo/Markdownpy/blob/main/LICENSE.txt)",
+    "[![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://github.com/aidanjungo/Markdownpy/blob/main/LICENSE)",
     no_new_line=True,
 )
 md.p(
