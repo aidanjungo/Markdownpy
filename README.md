@@ -1,5 +1,5 @@
 [![PyPi version](https://img.shields.io/pypi/v/markdownpy.svg)](https://pypi.python.org/pypi/markdownpy)
-[![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://github.com/aidanjungo/Markdownpy/blob/main/LICENSE.txt)
+[![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://github.com/aidanjungo/Markdownpy/blob/main/LICENSE)
 [![Black code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 # Markdownpy
 
@@ -42,13 +42,14 @@ md.p("paragraph")
 
 md.h2("Lists")
 
-mylist=[]
+mylist = []
 for i in range(5):
-   mylist.append(f"item_{i}") 
+    mylist.append(f"item_{i}")
 
 md.blist(mylist)
 
 md.save()
+
 ```
 
 From more example, checkout [example.py](examples/example.py)
