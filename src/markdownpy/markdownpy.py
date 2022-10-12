@@ -179,6 +179,14 @@ class Table:
     
     def __init__(self, mytable=[]):
         self.table = mytable
+        self.check_table()
+
+    def check_table(self):
+        """Check if the table have the correct format."""
+
+        for r,row in enumerate(self.table[:-1]):
+            if len(row) != len(self.table[r+1]):
+                raise ValueError("All rows of the table must have the same length!")
 
     def from_csv(self, path):
         """Get table form a CSV file."""
@@ -186,8 +194,8 @@ class Table:
         self.table = []
         
         with open(path, newline='') as csvfile:
-            spamreader = csv.reader(csvfile, delimiter=',')
-            for row in spamreader:
+            lines = csv.reader(csvfile, delimiter=',')
+            for row in lines:
                 self.table.append(row)
     
     def write(self):
@@ -199,5 +207,7 @@ class Table:
             lines += "|" + "|".join(row_str) + "|\n"
             if r==0:
                 lines += "|" + "|".join(["-"]*len(row_str)) + "|\n"
+        
+        self.check_table()
             
         return lines
