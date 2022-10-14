@@ -15,6 +15,7 @@ limitations under the License.
 Author: Aidan Jungo
 """
 
+import csv
 
 class MarkdownDoc:
     def __init__(self, path):
@@ -172,3 +173,61 @@ class Reference:
         """Write down a reference"""
 
         return f'<a id="{self.id}">[{self.idx}]</a> ' + self.description
+
+class Table:
+    """Class to add Table from different sources."""
+    
+    def __init__(self, mytable=[]):
+        self.table = mytable
+        self.check_table()
+
+    def check_table(self):
+        """Check if the table have the correct format."""
+
+        for r,row in enumerate(self.table[:-1]):
+            if len(row) != len(self.table[r+1]):
+                raise ValueError("All rows of the table must have the same length!")
+
+    def from_csv(self, path):
+        """Get table form a CSV file."""
+        
+        self.table = []
+        
+        with open(path, newline='') as csvfile:
+            lines = csv.reader(csvfile, delimiter=',')
+            for row in lines:
+                self.table.append(row)
+                
+        self.check_table()
+    
+    def write(self):
+        """Write the table in the Markdown document."""
+        
+        colomn_width = self.colomn_width()
+        dash_sep = ["-"*col for col in colomn_width]
+        
+        lines = ""
+        for r,row in enumerate(self.table):
+            row_str = [f"{i}" for i in row]
+            lines += "|" + "|".join(row_str) + "|\n"
+            if r==0:
+                lines += "|" + "|".join(dash_sep) + "|\n"
+        
+        return lines
+    
+    def colomn_width(self):
+        """Get a list of all column max width."""
+        
+        column_width = [len(i) for i in self.table[0]]
+        
+        for row in self.table[1:]:
+            current_col_width = [len(str(i)) for i in row]
+            
+            for i, (len_a, len_b) in enumerate(zip(column_width,current_col_width)):
+                column_width[i]=max(len_a, len_b)
+                
+        return column_width
+                
+            
+            
+        

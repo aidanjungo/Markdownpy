@@ -92,3 +92,17 @@ This is my refs [[1]](#JoR22), [[2]](#JoR23),  [[3]](#JoR24) cite in a paragraph
 
 <a id="#JoR24">[3]</a> Doe J., Title of a good reference, Journal of References, Volume 44, Number 6,  <https://google.com>
 
+### Tables
+
+|a|b|c|
+|-|-|-|
+|1|2|3|
+
+
+|a|b|c|test123|
+|-|-|-|-------|
+|1|2|3|4|
+|2|3|4|5|
+|4|6|8|10|
+
+
